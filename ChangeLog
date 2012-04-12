@@ -1,0 +1,18 @@
+Version 1.2.0
+-------------
+Support for homoglyph suppression
+Option to force all uppercase characters
+Option to force all lowercase characters
+Option to suppress configuration warnings
+Default password length increased to 14 characters
+
+Version 1.1.0 
+-------------
+A system wide configuration file is now supported
+A minor character array mapping bug was corrected
+A minor argument processing bug was corrected
+
+Version 1.0.0
+-------------
+Initial Release
+

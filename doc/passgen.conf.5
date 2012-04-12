@@ -1,0 +1,78 @@
+.TH "passgen Configuration File" 5
+.SH NAME
+passgen.conf \- The configuration file for the CryptNET password candidate generator.
+.SH SYNOPSIS
+.B /etc/passgen.conf
+
+.SH DESCRIPTION
+The
+.B passgen.conf
+configuration file is read when the
+.B passgen
+program is executed, if in exists.  Usually, it is stored in the /etc directory, but could be stored elsewere.  If the file is stored in a location other than the default, that location must be explicitly defined at compile time.
+
+All of the options that
+.B passgen
+accepts on the command line may have default values set for them in the configuration file.  In the configuration file, lines beginning with a '#' character are ignored as comments.  Blank lines are ignored. The configuration options are space delimited in a "key value" format where the key is the variable name in the source code and the value is what the program will set that variable to.  Restrictions on length or format are specified as a comment directly above the variable definition line.
+
+The configuration file is distributed with all values set to the program defaults and commented out.  To change a value, the line defining the variable in the configuration file should be uncommented and an acceptable alternative value should be set.
+
+The following variables can be set in the configuration file:
+
+.TP
+.B num_chars
+Specifies the length of the passwords to be generated.
+.TP
+.B num_passwds
+Specifies the number of passwords to be generated.
+.TP
+.B use_urandom
+Use the non-blocking /dev/urandom device to speed password candidate generation. (0 = No, 1 = Yes)
+.TP
+.B no_space
+Exclude the space character from generated password candidates.  (0 = No, 1 = Yes)
+.TP
+.B passwd_type
+Generate password candidates consisting of the following:
+.RS
+0 - All printable characters.
+.RE
+.RS
+1 - Alpha numeric characters only.
+.RE
+.RS
+2 - Alphabetic characters only.
+.RE
+.RS
+3 - Numeric characters only.
+.RE
+.TP
+.B forced_case
+For alphabetic characters, force the characters to a specific case. 
+.RS
+0 - Do not force case (mixed case).
+.RE
+.RS
+1 - Force all alphabetic characters to lowercase.
+.RE
+.RS
+2 - Force all alphabetic characters to uppercase.
+.RE
+.TP
+.B homoglyph_supression_level
+The level homoglyphs (similar looking characters) should be suppressed.
+.RS
+0 \- No homoglyph suppression.
+.RE
+.RS
+1 \- Suppress font homoglyphs such as zero, capital 'o' (Oscar), one, and lowercase 'l' (Lema).
+.RE
+.RS
+2 \- Suppress font homoglyphs and potential character homoglyphs such as backtick, apostrophe,
+double quote, space, and underbar.
+.RE
+
+.SH "SEE ALSO"
+passgen(1) passwd(1)
+.SH BUGS
+There are no known bugs.

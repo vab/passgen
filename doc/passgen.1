@@ -1,0 +1,76 @@
+.TH "CryptNET Password Generator" 1
+.SH NAME
+<passgen> \- A password candidate generator
+.SH SYNOPSIS
+.B passgen
+[options]
+
+options: [-aAChHlLNrsuUv] [--help] [--version]
+.SH DESCRIPTION
+.B passgen
+generates a list of password candidates for the user to choose from by mapping operating system sources of pseudorandomness into printable character arrays with a mod operation.
+
+By default, /dev/random is used as the source for entropy.  If a large number of password candidates are being generated the process may be slowed while the device blocks.  This can avoided by using the -u flag, which will cause the nonblocking urandom device as the entropy source. 
+.SH OPTIONS
+.TP
+.B \-a
+Generate password candidates alpha numeric characters only.
+.TP
+.B \-A
+Generate password candidates using alphabetic characters only.
+.TP
+.B \-C
+Suppress config file not found message.
+.TP
+.B \-h
+Displays help text.
+.TP
+.B \-H
+Homoglyph suppression level (0-2)
+.RS
+0 \- No homoglyph suppression.
+.RE
+.RS
+1 \- Suppress font homoglyphs such as zero, capital 'o' (oscar), one, and lowercase 'l' (lema).
+.RE
+.RS
+2 \- Suppress font homoglyphs and potential character homoglyphs such as backtick, apostrophe, double
+quote, space, and underbar.
+.RE
+.TP
+.B \-l
+Specifies the length of the passwords to be generated.
+.TP
+.B \-L
+For any letters, use lowercase only.
+.TP
+.B \-n
+Specifies the number of passwords to be generated.
+.TP
+.B \-N
+Generate password candidates using numeric charaters only.
+.TP
+.B \-r
+Use the blocking /dev/random device for password candidate generation.
+.TP
+.B \-s
+Exclude the space character from generated password candidates.
+.TP
+.B \-u
+Use the non-blocking /dev/urandom device to speed password candidate generation.
+.TP
+.B \-U
+For any letters, use uppercase only.
+.TP
+.B \-v
+Display program version information.
+.TP
+.B \-\-help
+Display help text.
+.TP
+.B \-\-version
+Display program version information.
+.SH "SEE ALSO"
+passwd(1) passgen.conf(5)
+.SH BUGS
+There are no known bugs.
