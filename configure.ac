@@ -1,6 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(src/passgen.c)
-AM_INIT_AUTOMAKE(passgen,1.2.0)
+AC_INIT([passgen], [1.2.0])
+AC_CONFIG_SRCDIR([src/passgen.c])
+AM_INIT_AUTOMAKE
 
 dnl Set of available languages.
 ALL_LINGUAS="en"
