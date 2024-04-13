@@ -1,8 +1,6 @@
-/*  Author:		V. Alex Brennen (vab@mit.edu)	*/
-/*  Copyright:		None				*/
-/*  License:		Public Domain			*/
-/*  Created:		2006.12.26			*/
-/*  Last Updated:	2011.06.18			*/
+/*  Author:         V. Alex Brennen     */
+/*  Copyright:      None                */
+/*  License:        Public Domain       */
 
 #include "passgen_conf.h"
 
@@ -37,11 +35,7 @@ int read_passgen_config(struct passgen_config **config)
 	memset(line,0x00,513);
 	memset(file_loc,0x00,1024);
 
-	if(file_exists(CONF))
-	{
-		strncpy(file_loc,CONF,1023);
-	}
-	else if(file_exists("/etc/passgen.conf"))
+	if(file_exists("/etc/passgen.conf"))
 	{
 		strncpy(file_loc,"/etc/passgen.conf",63);
 	}
@@ -132,7 +126,7 @@ int read_passgen_config(struct passgen_config **config)
 				if(((*config)->passwd_type > 3) || ((*config)->passwd_type < 0))
 					config_reject(name);
 			}
-			else if(memcmp(name,"homoglyph_suppression_level",26) == 0)
+			else if(memcmp(name,"homoglyph_suppression_level",27) == 0)
 			{
 				if(!(isdigit(value[0])))
 					config_reject(name);
@@ -141,7 +135,7 @@ int read_passgen_config(struct passgen_config **config)
 				if(((*config)->homoglyph_suppression_level > 2) || ((*config)->homoglyph_suppression_level < 0))
 					config_reject(name);
 			}
-			else if(memcmp(name,"forced_case",14) == 0)
+			else if(memcmp(name,"forced_case",11) == 0)
 			{
 				int forced_case = 0;
 				

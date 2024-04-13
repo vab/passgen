@@ -1,3 +1,10 @@
+Version 1.2.1
+-------------
+Autotools updates
+Config memcmp call updates
+Removal of user defined config file location
+File comment header updates
+
 Version 1.2.0
 -------------
 Support for homoglyph suppression

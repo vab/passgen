@@ -1,12 +1,9 @@
-/*  Author:		V. Alex Brennen (vab@mit.edu)	*/
-/*  Copyright:		None				*/
-/*  License:		Public Domain			*/
-/*  Created:		2006.12.26			*/
-/*  Last Updated:	2011.06.18			*/
+/*  Author:         V. Alex Brennen     */
+/*  Copyright:      None                */
+/*  License:        Public Domain       */
 
 #ifndef PASSGEN_DATASTRUCTURES
 #define PASSGEN_DATASTRUCTURES
-
 
 /* This is the basic configuration datastructure.  It is initialized by
 	init_passgen_config() to default values.  Later, it is reconfigured
@@ -27,4 +24,3 @@ struct passgen_config
 };
 
 #endif
-

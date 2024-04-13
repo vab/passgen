@@ -1,8 +1,6 @@
-/*  Author:		V. Alex Brennen (vab@mit.edu)	*/
-/*  Copyright:		None				*/
-/*  License:		Public Domain			*/
-/*  Created:		2006.09.15			*/
-/*  Last Updated:	2011.06.18			*/
+/*  Author:         V. Alex Brennen     */
+/*  Copyright:      None                */
+/*  License:        Public Domain       */
 
 #include "passgen.h"
 
@@ -14,7 +12,7 @@
 
 int main(int argc,char *argv[])
 {
-	const char version[] = "1.2.0";
+	const char version[] = "1.2.1";
 
 	int	rslt = 0;
 	int	arg = 0;
@@ -532,7 +530,7 @@ int print_help(void)
 
 int invalid_argument(void)
 {
-	fprintf(stderr,"passgen: Invalid arument given\n\n");
+	fprintf(stderr,"passgen: Invalid argument given\n\n");
 
 	print_help();
 

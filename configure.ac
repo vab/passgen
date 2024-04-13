@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([passgen], [1.2.0])
+AC_INIT([passgen],[1.2.1])
 AC_CONFIG_SRCDIR([src/passgen.c])
 AM_INIT_AUTOMAKE
 
@@ -10,9 +10,6 @@ dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
 
-dnl Checks for header files.
-AC_HEADER_STDC
-
 AC_SUBST(PKG_CPPFLAGS)
 AC_SUBST(PKG_LIBS)
 AC_SUBST(PKG_CFLAGS)
@@ -22,14 +19,12 @@ dnl Where to put passgen.conf
 if test [ \"NONE\" == \"$prefix\" ]; then
 AC_SUBST(CONFDIR, "/etc")
 AC_ARG_WITH(conf,
-	AC_HELP_STRING([--with-conf=FILE],
-		[where config file lives [[/etc]]]),
+	AS_HELP_STRING([--with-conf=FILE],[where config file lives [[/etc]]]),
 	CONF="${withval}")
 else
 	AC_SUBST(CONFDIR, "$prefix/etc")
 	AC_ARG_WITH(conf,
-        AC_HELP_STRING([--with-confdir=DIR],
-		[where config file lives [[/etc]]]),
+        AS_HELP_STRING([--with-confdir=DIR],[where config file lives [[/etc]]]),
 	CONFDIR="${withval}")
 fi
 AC_MSG_NOTICE([where to store config... $CONFDIR])
@@ -51,4 +46,5 @@ else
 fi
 
 dnl Files to process
-AC_OUTPUT([Makefile etc/passgen.conf etc/Makefile src/Makefile doc/Makefile])
+AC_CONFIG_FILES([Makefile etc/passgen.conf etc/Makefile src/Makefile doc/Makefile])
+AC_OUTPUT
