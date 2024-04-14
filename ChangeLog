@@ -4,6 +4,10 @@ Autotools updates
 Config memcmp call updates
 Removal of user defined config file location
 File comment header updates
+Add README.md file
+Spelling corrections
+License set to Unlicense
+Documentation updates
 
 Version 1.2.0
 -------------
@@ -22,4 +26,3 @@ A minor argument processing bug was corrected
 Version 1.0.0
 -------------
 Initial Release
-

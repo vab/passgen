@@ -1,0 +1,48 @@
+# CryptNET Password Generator
+
+## Overview
+
+This program provides password candidates. It maps data read from pseudorandom devices on your computer to arrays of characters.
+
+A configuration file or command line flags can be used control the control the program. The number of candidates presented to the user can be configured. The length, level of randomness password candidates generated can be set. The exclusion of numbers, upper case letters, lower case letters, symbolic characters, and homoglyphs can be controlled.
+
+## License
+
+Public Domain
+
+## Installation
+
+This program's build process is based on GNU Autotools. To install the program, run the following commands:
+```
+bash$ ./configure
+bash$ make
+bash$ make install
+```
+
+## Usage
+
+**passgen** [-aAChHlLNrsuUv] [--help] [--version]
+
+### Command Line Arguments
+
+| Arg | Description |
+|-----|-------------|
+|-a| Alpha numeric characters only.|
+|-A| Alphabetic characters only.|
+|-C| Suppress config file not found messages.|
+|-h| Print help text.|
+|-H| Homoglyph suppression level (0-2).|
+||0 - No homoglyph suppression.|
+||1 - Suppress font homoglyphs such as zero, capital 'o' (oscar), one, and lowercase 'l' (lima).|
+||2 - Suppress font homoglyphs and potential character homoglyphs such as backtick, apostrophe, double quote, space, and underbar.|
+|-l|The length of the password.|
+|-L|For any letters, use lowercase only.|
+|-n|Number of passwords to provide.|
+|-N|Numeric characters only.|
+|-r|Use /dev/random for password generation.|
+|-s|Exclude the space character.|
+|-u|Use /dev/urandom rather than /dev/random. This will speed password generation.|
+|-U|For any letters, user uppercase only.|
+|-v|Display version information.|
+|--help|Display help text.|
+|--version|Display version information.|

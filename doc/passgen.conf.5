@@ -9,7 +9,7 @@ The
 .B passgen.conf
 configuration file is read when the
 .B passgen
-program is executed, if in exists.  Usually, it is stored in the /etc directory, but could be stored elsewere.  If the file is stored in a location other than the default, that location must be explicitly defined at compile time.
+program is executed, if in exists.  Usually, it is stored in the /etc directory, but could also be stored in /usr/local/etc.
 
 All of the options that
 .B passgen
@@ -59,13 +59,13 @@ For alphabetic characters, force the characters to a specific case.
 2 - Force all alphabetic characters to uppercase.
 .RE
 .TP
-.B homoglyph_supression_level
+.B homoglyph_suppression_level
 The level homoglyphs (similar looking characters) should be suppressed.
 .RS
 0 \- No homoglyph suppression.
 .RE
 .RS
-1 \- Suppress font homoglyphs such as zero, capital 'o' (Oscar), one, and lowercase 'l' (Lema).
+1 \- Suppress font homoglyphs such as zero, capital 'o' (Oscar), one, and lowercase 'l' (Lima).
 .RE
 .RS
 2 \- Suppress font homoglyphs and potential character homoglyphs such as backtick, apostrophe,

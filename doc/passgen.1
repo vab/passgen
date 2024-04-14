@@ -10,7 +10,7 @@ options: [-aAChHlLNrsuUv] [--help] [--version]
 .B passgen
 generates a list of password candidates for the user to choose from by mapping operating system sources of pseudorandomness into printable character arrays with a mod operation.
 
-By default, /dev/random is used as the source for entropy.  If a large number of password candidates are being generated the process may be slowed while the device blocks.  This can avoided by using the -u flag, which will cause the nonblocking urandom device as the entropy source. 
+By default, /dev/random is used as the source for entropy.  If a large number of password candidates are being generated the process may be slowed while the device blocks.  This can avoided by using the -u flag, which will cause the non-blocking urandom device as the entropy source. 
 .SH OPTIONS
 .TP
 .B \-a
@@ -31,7 +31,7 @@ Homoglyph suppression level (0-2)
 0 \- No homoglyph suppression.
 .RE
 .RS
-1 \- Suppress font homoglyphs such as zero, capital 'o' (oscar), one, and lowercase 'l' (lema).
+1 \- Suppress font homoglyphs such as zero, capital 'o' (oscar), one, and lowercase 'l' (lima).
 .RE
 .RS
 2 \- Suppress font homoglyphs and potential character homoglyphs such as backtick, apostrophe, double
@@ -48,7 +48,7 @@ For any letters, use lowercase only.
 Specifies the number of passwords to be generated.
 .TP
 .B \-N
-Generate password candidates using numeric charaters only.
+Generate password candidates using numeric characters only.
 .TP
 .B \-r
 Use the blocking /dev/random device for password candidate generation.
